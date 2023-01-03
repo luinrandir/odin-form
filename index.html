@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-Up</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="logo">
+        <div class="logo__name">
+          <picture
+            ><img src="img/odin-lined.png" alt="Odin Project Logo" />
+          </picture>
+          <p>オーディン</p>
+        </div>
+        <picture>
+          <img
+            src="img/hans-isaacson-k0dZh0vSQ5A-unsplash.jpg"
+            alt="Workspace desk with computer and pegboard on wall."
+          />
+        </picture>
+        <p class="logo__credit">
+          Photo by
+          <a
+            href="https://unsplash.com/it/@hans_isaacson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Hans Isaacson</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/k0dZh0vSQ5A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+      <div class="signup">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life top help you realize your deepest dreams. Sign up
+          now to get started.
+        </p>
+        <p>You know you want to.</p>
+        <form action="#">
+          <h3>Let's do this!</h3>
+          <p>
+            Required files are followed by
+            <strong><span aria-label="required">*</span></strong>
+          </p>
+          <section>
+            <div>
+              <label for="firstname" class="signup__label">
+                First Name: <span aria-label="required">*</span>
+              </label>
+              <input type="text" id="firstname" name="firstname" />
+            </div>
+            <div>
+              <label for="lastname" class="signup__label">
+                Last Name: <span aria-label="required">*</span>
+              </label>
+              <input type="text" id="firstname" name="lastname" />
+            </div>
+            <div>
+              <label for="email" class="signup__label">
+                Email: <span aria-label="required">*</span>
+              </label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div>
+              <label for="phonenumber" class="signup__label">
+                Phone Number:
+              </label>
+              <input type="tel" id="phonenumber" name="phonenumber" />
+            </div>
+            <div>
+              <label for="password" class="signup__label">
+                Password: <span aria-label="required">*</span>
+              </label>
+              <input type="password" id="password" name="password" />
+            </div>
+            <div>
+              <label for="confirmpassword" class="signup__label">
+                Confirm Password: <span aria-label="required">*</span>
+              </label>
+              <input
+                type="password"
+                id="confirmpassword"
+                name="confirmpassword"
+              />
+            </div>
+          </section>
+          <section>
+            <div>
+              <!-- Button should be type="submit" -->
+              <!-- For demo and security purposes it will be a generic button -->
+              <button type="button">Create Account</button>
+            </div>
+          </section>
+        </form>
+        <p>Already have an account? <a href="#">Log in</a></p>
+      </div>
+    </main>
+  </body>
+</html>
