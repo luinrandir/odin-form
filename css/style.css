@@ -1,0 +1,126 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+body {
+  text-rendering: optimizeSpeed;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Custom Properties */
+:root {
+  /* colors */
+  --iro-accent: hsl(31, 45%, 48%);
+  --iro-primary: hsl(45, 3%, 75%);
+  --iro-secondary: hsl(40, 100%, 99%);
+
+  /* fonts */
+  --ff-primary: "Roboto", sans-serif;
+  --ff-logo: "Noto Serif JP", serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fc-primary: hsl(0, 0%, 5%);
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-24: 1.5rem;
+  --fs-32: 2rem;
+  --fs-48: 3rem;
+}
+
+/* General Styling */
+body {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  color: var(--fc-primary);
+  font-size: var(--fs-16);
+}
+
+main {
+  background-color: var(--iro-primary);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+/* Logo Styling */
+.logo {
+  background-image: url("../img/hans-isaacson-k0dZh0vSQ5A-unsplash.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.logo__name {
+  background-color: hsla(0, 0%, 0%, 0.4);
+  color: hsl(0, 0%, 100%);
+  font-family: var(--ff-logo);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-32);
+  align-self: end;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo__name > img {
+  max-width: 25%;
+  height: auto;
+}
+.logo__credit {
+  font-size: var(--fs-12);
+  color: hsl(0, 0%, 100%);
+  padding: 0.5em;
+  justify-self: end;
+  align-self: end;
+}
+.logo__credit > a {
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: var(--fw-bold);
+  color: hsl(0, 0%, 0%);
+  cursor: pointer;
+}
+
+.logo__credit > a:hover {
+  text-decoration: underline;
+}
