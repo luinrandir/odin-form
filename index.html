@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-Up</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&family=Roboto:ital,wght@0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Scripts -->
+    <script src="js/form_handling.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="logo">
+        <div class="logo__name">
+          <img src="img/odin-lined.png" alt="Odin Project Logo" />
+          <p>オーディン</p>
+        </div>
+        <p class="logo__credit">
+          Photo by
+          <a
+            href="https://unsplash.com/it/@hans_isaacson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Hans Isaacson</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/k0dZh0vSQ5A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+      <div class="signup">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life top help you realize your deepest dreams. Sign up
+          <em>now</em> to get started.
+        </p>
+        <p>You <em>know</em> you <i>want</i> to.</p>
+        <form action="" method="get" onsubmit="return validatePassword()">
+          <h3>Let's do this!</h3>
+          <p>
+            Required files are followed by
+            <strong><span aria-label="required">*</span></strong>
+          </p>
+          <section>
+            <div>
+              <label for="first-name" class="signup__label">
+                First Name: <span aria-label="required">*</span>
+              </label>
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="John"
+                required
+              />
+            </div>
+            <div>
+              <label for="last-name" class="signup__label">
+                Last Name: <span aria-label="required">*</span>
+              </label>
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Doe"
+                required
+              />
+            </div>
+            <div>
+              <label for="email" class="signup__label">
+                Email: <span aria-label="required">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jondoe@example.com"
+                required
+              />
+            </div>
+            <div>
+              <label for="phone-number" class="signup__label">
+                Phone Number:
+              </label>
+              <input
+                type="tel"
+                id="phone-number"
+                name="phone-number"
+                placeholder="555-555-5555"
+                pattern="\(?(\d{3})\)?[-\.\s]?(\d{3})[-\.\s]?(\d{4})"
+                title="Please enter a valid phone number. ex: 555-555-5555 or (555)555-555"
+              />
+            </div>
+            <div>
+              <label for="password" class="signup__label">
+                Password: <span aria-label="required">*</span>
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%&*])[A-Za-z\d!@#$%&*]{8,}$"
+                title="Password requires minimum 8 characters, 1 uppercase letter, 1 lowercase letter, one number and one special character"
+                required
+              />
+              <span class="password__info"
+                >Password requires at least:
+                <ul role="list">
+                  <li>a minimum of 8 characters</li>
+                  <li>1 uppercase letter</li>
+                  <li>1 lowercase letter</li>
+                  <li>1 number</li>
+                  <li>1 special character: !,@,#,$,%,&,*</li>
+                </ul></span
+              >
+            </div>
+            <div>
+              <label for="confirm-password" class="signup__label">
+                Confirm Password: <span aria-label="required">*</span>
+              </label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                required
+              />
+            </div>
+          </section>
+          <button type="submit" id="signup__button">Create Account</button>
+        </form>
+        <div class="submit">
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
